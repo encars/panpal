@@ -8,7 +8,7 @@ const Header = (props: Props) => {
     <div className="py-5 bg-slate-300">
         <div>
             <Link href="/">
-                <h1 className="text-blue-700 font-bold text-5xl text-center">Recipal</h1>
+                <h1 className="text-blue-700 font-bold text-5xl text-center">PanPal</h1>
             </Link>
         </div>
     </div>
