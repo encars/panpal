@@ -1,5 +1,6 @@
 import React from "react";
 
+import { fetchRecipesAreas } from "../page";
 import RecipeList from "@/components/RecipeList";
 
 export interface Meal {
@@ -28,5 +29,13 @@ const page = async (props: Props) => {
     const meals = await getMeals(props.params.type);
     return <RecipeList recipes={meals.meals} type={props.params.type} />;
 }
+
+export const generateStaticParams = async () => {
+    const areas = await fetchRecipesAreas();
+
+    return areas.map((area) => ({
+        type: area,
+    }));
+};
 
 export default page;

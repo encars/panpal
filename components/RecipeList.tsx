@@ -5,6 +5,10 @@ import Link from "next/link";
 import { Meal } from "@/app/types/[type]/page";
 
 const RecipeList = (props: { recipes: Meal[]; type: string }) => {
+  if (!props.recipes) {
+    return <div>No recipes found</div>;
+  }
+  
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
         {props.recipes.map((recipe: Meal, idx: number) => {
