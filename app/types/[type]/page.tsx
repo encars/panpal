@@ -1,7 +1,7 @@
 import React from "react";
 
-import { fetchRecipesAreas } from "../page";
 import RecipeList from "@/components/RecipeList";
+import { fetchRecipesAreas } from "@/utils/recipes";
 
 export interface Meal {
     strMeal: string;
